@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	worldsPath = filepath.Join(env.ValheimSavePath, "worlds")
+	worldsPath = filepath.Join(env.ValheimSavePath, "worlds_local")
 	worldsMtx  sync.Mutex
 )
 
@@ -36,7 +36,15 @@ func (v *Valheim) ensureWorldIsNotInUse(name string) error {
 
 // GetWorldList returns list of world names
 func (v *Valheim) GetWorldList() []WorldListItem {
-	names, sizes := util.ReadDirFiles(worldsPath, "db")
+	names, sizes := util.ReadDirFiles(
+    
+    
+    
+    
+    
+    
+    
+    Path, "db")
 	worlds := make([]WorldListItem, 0)
 	for i, name := range names {
 		worlds = append(worlds, WorldListItem{name, sizes[i]})
